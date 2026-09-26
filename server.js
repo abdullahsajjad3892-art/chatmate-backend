@@ -24,10 +24,12 @@ app.use(express.json());
 const authRoutes = require('./routes/authRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const messageRoutes = require('./routes/messageRoutes');
+const storyRoutes = require('./routes/storyRoutes');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api/stories', storyRoutes);
 
 app.get('/', (req, res) => {
   res.send('ChatMate Backend API is running...');
